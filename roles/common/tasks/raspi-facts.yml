@@ -52,6 +52,7 @@
   register: raspi_wifi_country
   changed_when: False
   check_mode: no
+  ignore_errors: True #to avoid error when WiFi is not present
   tags:
     - raspi
 
