@@ -89,6 +89,14 @@ Raspberry Pi.
 This is similar to local mode:
 
     (ansible_env) $ ansible-playbook --ask-vault-pass --ask-become-pass --inventory hosts.remote ./remote.yml
+    (ansible_env) $ ansible-playbook --ask-vault-pass  --inventory hosts.remote ./remote.yml
+    Vault password:
+    New pi account password:
+    confirm New pi account password:
+    Ethernet interface [eth0]:
+    Static IPv4 address: 192.168.0.2
+    Routers (comma separated): 192.168.0.1
+    DNS servers (space separated) [8.8.8.8 8.8.4.4]: 192.168.0.1 8.8.8.8
 
 The playbook follows the same code path.
 
