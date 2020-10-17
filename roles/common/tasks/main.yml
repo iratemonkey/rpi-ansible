@@ -41,12 +41,13 @@
 - name: set wifi country
   command: "raspiconfig nonint do_wifi_country {{ myconfig.wifi_country }}"
   when: "'wifi_country' in myconfig and myconfig.wifi_country != raspi_wifi_country"
+  ignore_errors: True #to avoid error when WiFi is not present
 
 # Enable sshd
 - name: disable ssh login for user pi
   lineinfile:
     dest=/etc/ssh/sshd_config
-    line="DenyUsers pi"
+    line="DenyUsers root"
     state=present
   tags:
     - raspi
@@ -58,7 +59,7 @@
     - raspi
 
 # Other tasks
-# - include: sshd.yml
+#- include: sshd.yml
 - include: software.yml
 - include: users.yml
 - include: raspi-config.yml
