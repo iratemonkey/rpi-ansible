@@ -2,6 +2,10 @@
 
 Credit to [Glenn K. Lockwood](https://github.com/glennklockwood/rpi-ansible)
 
+Extra sources:
+- https://github.com/giuaig/ansible-raspi-config
+- https://github.com/vicchi/ansible-pi-lockdown
+
 ## Introduction
 
 This is an Ansible configuration that configures a fresh Raspbian installation
