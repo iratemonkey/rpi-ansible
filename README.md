@@ -1,6 +1,6 @@
 # Raspberry Pi Ansible Playbook
 
-Glenn K. Lockwood, October 2018 - July 2020.
+Credit to [Glenn K. Lockwood](https://github.com/glennklockwood/rpi-ansible)
 
 ## Introduction
 
