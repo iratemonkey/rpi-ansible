@@ -1,6 +1,6 @@
 This directory contains some example outputs from
 
-    ansible -i hosts.remote -m setup cloverdale.local
+    ansible -i hosts.remote -m setup rpi-01.local
 
 or
 
