@@ -1,3 +1,4 @@
+# https://github.com/vicchi/ansible-pi-lockdown
 ---
 - hosts: raspberrypi
   become: yes
@@ -5,3 +6,25 @@
   become_method: sudo
   roles:
     - common
+    #- password
+    #- static-ip
+  vars_prompt:
+    - name: "pi_password"
+      prompt: "New pi account password"
+      private: yes
+      encrypt: "sha512_crypt"
+      confirm: yes
+    - name: "interface"
+      prompt: "Ethernet interface"
+      default: "eth0"
+      private: no
+    - name: "ipaddress"
+      prompt: "Static IPv4 address"
+      private: no
+    - name: "routers"
+      prompt: "Routers (comma separated)"
+      private: no
+    - name: "dns_servers"
+      prompt: "DNS servers (space separated)"
+      default: "8.8.8.8 8.8.4.4"
+      private: no
