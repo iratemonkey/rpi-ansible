@@ -26,3 +26,4 @@ extra_software:
   - "w3m"
   - "irssi"
   - "screen"
+  - "nfs-common"
